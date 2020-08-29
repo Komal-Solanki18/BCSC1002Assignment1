@@ -1,7 +1,7 @@
 /*  Created by IntelliJ IDEA.
- *  User: Divyansh Bhardwaj (dbc2201)
- *  Date: 21/08/20
- *  Time: 3:50 PM
+ *  User: Komal Solanki.
+ *  Date: 29/08/20
+ *  Time: 8:35 PM
  *  File Name : Library.java
  * */
 package definitions;
@@ -15,6 +15,13 @@ public class Library {
         this.allCurrentlyAvailableBooks = allCurrentlyAvailableBooks;
     }
 
+    public Library() {
+        this.allCurrentlyAvailableBooks = new Book[100];
+        for (int START_INDEX = 0; START_INDEX < allCurrentlyAvailableBooks.length; START_INDEX++)
+            allCurrentlyAvailableBooks[START_INDEX] = new Book("Book" + (START_INDEX + 1));
+
+    }
+
     public void issuedBook(String bookName) {
         System.out.println(bookName + "book is issued by you");
     }
@@ -24,14 +31,13 @@ public class Library {
     }
 
     public void viewAllIssuedBooks() {
-        for (Book allCurrentlyAvailableBook : allCurrentlyAvailableBooks) {
-            System.out.println(allCurrentlyAvailableBook);
+        for (Book allCurrentAvailableBook : allCurrentlyAvailableBooks) {
+            System.out.println(allCurrentAvailableBook);
         }
     }
 
-
     public Book[] getAllCurrentlyAvailableBooks() {
-        return allCurrentlyAvailableBooks.clone();
+        return allCurrentlyAvailableBooks;
     }
 
     public void setAllCurrentlyAvailableBooks(Book[] allCurrentlyAvailableBooks) {
