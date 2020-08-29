@@ -9,6 +9,10 @@ package definitions;
 public class Library {
     private Book[] allCurrentlyAvailableBooks;
 
+    public Library(Book[] allCurrentlyAvailableBooks) {
+        this.allCurrentlyAvailableBooks = allCurrentlyAvailableBooks;
+    }
+
     public Book[] getAllCurrentlyAvailableBooks() {
         return allCurrentlyAvailableBooks.clone();
     }
