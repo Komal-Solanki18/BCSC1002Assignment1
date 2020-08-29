@@ -19,6 +19,10 @@ public class Library {
         System.out.println(bookName + "book is issued by you");
     }
 
+    public void returnedBook(String bookName) {
+        System.out.println(bookName + "Thank you for returning the book!");
+    }
+
     public Book[] getAllCurrentlyAvailableBooks() {
         return allCurrentlyAvailableBooks.clone();
     }
