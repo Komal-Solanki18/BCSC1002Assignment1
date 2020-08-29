@@ -15,6 +15,10 @@ public class Library {
         this.allCurrentlyAvailableBooks = allCurrentlyAvailableBooks;
     }
 
+    public void issuedBook(String bookName) {
+        System.out.println(bookName + "book is issued by you");
+    }
+
     public Book[] getAllCurrentlyAvailableBooks() {
         return allCurrentlyAvailableBooks.clone();
     }
