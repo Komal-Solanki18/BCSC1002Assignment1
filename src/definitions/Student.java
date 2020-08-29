@@ -6,8 +6,6 @@
  * */
 package definitions;
 
-import java.util.Arrays;
-
 public class Student {
     private String firstName;
     private String middleName;
@@ -15,6 +13,15 @@ public class Student {
     private long universityRollNumber;
     private int numberOfBooksIssued;
     private Book[] namesOfTheBooksIssued;
+
+    public Student(String firstName, String middleName, String lastName, long universityRollNumber, int numberOfBooksIssued) {
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.lastName = lastName;
+        this.universityRollNumber = universityRollNumber;
+        this.numberOfBooksIssued = numberOfBooksIssued;
+        this.namesOfTheBooksIssued = new Book[numberOfBooksIssued];
+    }
 
 
     /**
