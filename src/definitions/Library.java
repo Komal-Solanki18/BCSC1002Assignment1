@@ -23,6 +23,13 @@ public class Library {
         System.out.println(bookName + "Thank you for returning the book!");
     }
 
+    public void viewAllIssuedBooks() {
+        for (Book allCurrentlyAvailableBook : allCurrentlyAvailableBooks) {
+            System.out.println(allCurrentlyAvailableBook);
+        }
+    }
+
+
     public Book[] getAllCurrentlyAvailableBooks() {
         return allCurrentlyAvailableBooks.clone();
     }
